@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Instagram clone 
+	</title>
+
+</head>
+<body>
+
+	<nav>
+		<a href="#">Home</a>
+		<a href="#register">Register</a>
+		<a href="#login">Login</a>
+		<a href="#add-image-form">Post!</a>
+
+	</nav>
+
+	<main>
+		<section class="page" id="home">
+				<h1> Home </h1>
+				<p> Welcome to Instagram Clone 2000. Simple and fun with less functionality than today's Instagram!</p>
+		</section>
+		<section class="page" id="register">
+			<h1>Register</h1>
+			<form id="register-form">
+				<input type="text" placeholder="username" id="register-username">
+				<input type="password" placeholder="password" id="register-password">
+				<div class="error" id="register-error"></div>
+				<button type="submit">Register</button>
+			</form>
+		</section>
+		<section class= "page" id="login">
+			<h1>Login</h1>
+			<form id="login-form">
+				<input type="text" placeholder="username" id="login-username">
+				<input type="password" placeholder="password" id="login-password">
+				<div class="error" id="login-error"></div>
+				<button type="submit">Login</button>
+			</form>
+		</section>
+		<!-- <section class="page" id="photoFeed">
+				<h1>Photo-feed</h1>  -->
+			<form class="page" id="add-image-form">
+				<input type="text" id="image-url-input">
+				<textarea id="image-caption-input"></textarea>
+				<button type="submit">Add Image</button>
+			</form>
+			<section id="image-list" placeholder="Caption"></section>
+		<!-- </section> -->
+
+
+
+
+<script type="text/template" id="image-row-template">
+	<div class="image-row" data-cid="<%= model.cid %>">
+		<img src="<%= model.get('url') %>">
+		<div class="image-caption">
+			<%= model.get ('caption') %>
+		</div>
+		<div class="comment-list"> </div>
+		<form class="comment-form" data-form-cid="<%= model.cid %>">
+			<input type="text" class= "comment-input">
+			<button type= "submit"> Add Comment </button>
+		</form>
+	</div>
+</script>
+<script type="text/template" id="comment-row-template">
+		<div class="comment-row">
+			<%= model.get('text') %>
+		</div>
+</script>
+
+<script type="text/javascript" src="scripts/all.js"></script>
+</body>
+
+
+</html>
