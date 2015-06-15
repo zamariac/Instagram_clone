@@ -13466,7 +13466,9 @@ $(document).ready(function() {
 		});
 	}
 
-})
+	
+	
+});
 
 
 },{"./collections/usercollections.js":5,"./models/usermodels.js":7,"./userrouter.js":8,"backbone":1,"backbone/node_modules/underscore":2,"jquery":3}],7:[function(require,module,exports){
